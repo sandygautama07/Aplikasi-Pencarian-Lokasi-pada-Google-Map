@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+
+    <EditText
+        android:id="@+id/TF_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/B_search"
+        android:layout_weight="1.01"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/B_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TF_location"
+        android:layout_alignParentEnd="true"
+        android:onClick="onClick"
+        android:text="Search" />
+
+
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/map"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-94dp"
+        android:layout_marginBottom="3dp">
+
+        <Button
+            android:id="@+id/B_restaurant"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/linearlayout"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/B_school"
+            android:background="@drawable/ic_baseline_restaurant_menu_24"
+            android:onClick="onClick"
+            />
+
+        <Button
+            android:id="@+id/B_school"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/linearlayout"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@+id/B_restaurant"
+            android:background="@drawable/ic_baseline_school_24"
+            android:backgroundTint="@color/grey"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/B_Hospital"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/linearlayout"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@+id/B_school"
+            android:background="@drawable/ic_baseline_local_hospital_24"
+            android:backgroundTint="@color/grey"
+            android:onClick="onClick"
+
+            />
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="-391dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="45dp"
+                android:text="Restaurant"/>
+
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="87dp"
+                android:text="School"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="55dp"
+                android:text="Hospital"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="510dp"
+    android:layout_marginBottom="100dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    tools:context=".MapsActivity" />
+
+
+
+</RelativeLayout>

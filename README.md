@@ -1,1 +1,4 @@
-# Aplikasi-Pencarian-Lokasi-pada-Google-Map
+# GIS_1811500025
+
+NIM : 1811500025
+Nama : Jimmy ngui
